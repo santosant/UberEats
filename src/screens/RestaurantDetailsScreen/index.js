@@ -3,7 +3,7 @@ import { styles } from './styles';
 import { Ionicons } from '@expo/vector-icons';
 import restaurants from '../../../assets/data/restaurants.json';
 import DishListItem from '../../components/DishListItem';
-import Header from './Header';
+import RestaurantHeader from './Header';
 
 const restaurant = restaurants[0];
 
@@ -11,7 +11,7 @@ const RestaurantDetailScreen = () => {
   return (
     <View style={styles.page}>
       <FlatList
-        ListHeaderComponent={Header}
+        ListHeaderComponent={() => <RestaurantHeader restaurant={restaurant} />}
         data={restaurant.dishes}
         renderItem={({ item }) => <DishListItem dish={item} />}
         keyExtractor={(item, index) => index.toString()}

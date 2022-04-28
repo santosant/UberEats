@@ -18,6 +18,11 @@ export const styles = StyleSheet.create({
     fontWeight: '600',
     marginVertical: 10
   },
+  menuTitle: {
+    marginVertical: 20,
+    fontSize: 18,
+    letterSpacing: 0.7
+  },
   subtitle: {
     fontSize: 15,
     color: '#525252'
